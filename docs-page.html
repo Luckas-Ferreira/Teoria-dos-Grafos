@@ -143,6 +143,11 @@
 							Database user=neo4j<br>
 							Password=TZHfIOd7YnL1DvhxnRDXy1FidjV6Pv4Zw8D0K66StEE
 							</p>
+
+							<p> 
+								<b>Filling the Database</b><br>
+								Executar querys 3.1 e 3.2<br>
+							</p>
 						</section><!--//docs-intro-->
 				    </header>
 					</section><!--//section-->
@@ -156,6 +161,124 @@
 						    <p>texto</p>
 						</section><!--//docs-intro-->
 				    </header>
+
+					<section class="docs-section" id="item-2-1">
+						<h2 class="section-heading">Section Item 3.1</h2>
+						<p>Preencher o banco de dados em grafo, com a criação dos vértices de cursos, professores e disciplinas, seguindo da criação das arestas conectando os vértices de disciplinas e professores </p>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+CREATE 
+(cursos5:cursos {name: 'Ciências Biológicas',title: 'Ciências Biológicas', id: 5, ch: 1796}), 
+(disciplinas113:disciplinas {name: 'A DIDÁTICA DO ENSINO DE CIÊNCIAS E',title: 'A DIDÁTICA DO ENSINO DE CIÊNCIAS E', id: 113, ch: 72}), 
+(disciplinas114:disciplinas {name: 'A FUNDAMENTOS ANÁTOMO FUNCIONAIS',title: 'A FUNDAMENTOS ANÁTOMO FUNCIONAIS', id: 114, ch: 72}), 
+(disciplinas115:disciplinas {name: 'A METODOLOGIA CIENTÍFICA 2',title: 'A METODOLOGIA CIENTÍFICA 2', id: 115, ch: 36}), 
+(disciplinas116:disciplinas {name: 'A PROPAGAÇÃO DE PLANTAS NATIVAS',title: 'A PROPAGAÇÃO DE PLANTAS NATIVAS', id: 116, ch: 36}), 
+(disciplinas117:disciplinas {name: 'A METODOLOGIA CIENTÍFICA 1',title: 'A METODOLOGIA CIENTÍFICA 1', id: 117, ch: 36}), 
+(disciplinas118:disciplinas {name: 'A ZOOLOGIA 1',title: 'A ZOOLOGIA 1', id: 118, ch: 72}), 
+(disciplinas119:disciplinas {name: 'A FÍSICA E BIOFÍSICA',title: 'A FÍSICA E BIOFÍSICA', id: 119, ch: 54}), 
+(disciplinas120:disciplinas {name: 'A BOTÂNICA SISTEMÁTICA 2',title: 'A BOTÂNICA SISTEMÁTICA 2', id: 120, ch: 72}), 
+(disciplinas121:disciplinas {name: 'A PRÁTICA DE CIÊNCIAS E BIOLOGIA EM',title: 'A PRÁTICA DE CIÊNCIAS E BIOLOGIA EM', id: 121, ch: 72}), 
+(disciplinas122:disciplinas {name: 'A ACE2',title: 'A ACE2', id: 122, ch: 60}), 
+(disciplinas123:disciplinas {name: 'A QUÍMICA GERAL',title: 'A QUÍMICA GERAL', id: 123, ch: 54}), 
+(disciplinas124:disciplinas {name: 'A DESENVOLVIMENTO E APRENDIZAGEM',title: 'A DESENVOLVIMENTO E APRENDIZAGEM', id: 124, ch: 72}), 
+(disciplinas125:disciplinas {name: 'A ÉTICA',title: 'A ÉTICA', id: 125, ch: 54}), 
+(disciplinas126:disciplinas {name: 'A FISIOLOGIA VEGETAL',title: 'A FISIOLOGIA VEGETAL', id: 126, ch: 54}), 
+(disciplinas127:disciplinas {name: 'A ECOLOGIA E MEIO AMBIENTE',title: 'A ECOLOGIA E MEIO AMBIENTE', id: 127, ch: 54}), 
+(disciplinas128:disciplinas {name: 'A CONSERVAÇÃO E MANEJO DE RECURSOS',title: 'A CONSERVAÇÃO E MANEJO DE RECURSOS', id: 128, ch: 36}), 
+(disciplinas129:disciplinas {name: 'A BIOLOGIA CELULAR E MOLECULAR',title: 'A BIOLOGIA CELULAR E MOLECULAR', id: 129, ch: 54}), 
+(disciplinas130:disciplinas {name: 'A DIDÁTICA',title: 'A DIDÁTICA', id: 130, ch: 72}), 
+(disciplinas131:disciplinas {name: 'A PALEONTOLOGIA E BIOGEOGRAFIA',title: 'A PALEONTOLOGIA E BIOGEOGRAFIA', id: 131, ch: 54}), 
+(disciplinas132:disciplinas {name: 'A ACE 4',title: 'A ACE 4', id: 132, ch: 60}), 
+(disciplinas133:disciplinas {name: 'A PRÁTICA DE CIÊNCIAS',title: 'A PRÁTICA DE CIÊNCIAS', id: 133, ch: 72}), 
+(disciplinas134:disciplinas {name: 'A FUNDAMENTOS DA SISTEMÁTICA E DA',title: 'A FUNDAMENTOS DA SISTEMÁTICA E DA', id: 134, ch: 36}), 
+(disciplinas135:disciplinas {name: 'A TÓPICOS ESPECIAIS DE BIOLOGIA GERAL',title: 'A TÓPICOS ESPECIAIS DE BIOLOGIA GERAL', id: 135, ch: 54}), 
+(disciplinas136:disciplinas {name: 'A PRÁTICA DE SAÚDE NA ESCOLA E NA',title: 'A PRÁTICA DE SAÚDE NA ESCOLA E NA', id: 136, ch: 54}), 
+(disciplinas137:disciplinas {name: 'A HISTOLOGIA BÁSICA',title: 'A HISTOLOGIA BÁSICA', id: 137, ch: 36}), 
+(disciplinas138:disciplinas {name: 'A IMUNOLOGIA',title: 'A IMUNOLOGIA', id: 138, ch: 36}), 
+(disciplinas139:disciplinas {name: 'A PROFISSÃO DOCENTE',title: 'A PROFISSÃO DOCENTE', id: 139, ch: 54}), 
+(disciplinas140:disciplinas {name: 'A TECNOLOGIAS DIGITAIS PARA O ENSINO',title: 'A TECNOLOGIAS DIGITAIS PARA O ENSINO', id: 140, ch: 54}), 
+(disciplinas141:disciplinas {name: 'A ESTÁGIO SUPERVISIONADO 1',title: 'A ESTÁGIO SUPERVISIONADO 1', id: 141, ch: 100}), 
+(disciplinas142:disciplinas {name: 'A ESTÁGIO SUPERVISIONADO 3',title: 'A ESTÁGIO SUPERVISIONADO 3', id: 142, ch: 100}), 
+(disciplinas143:disciplinas {name: 'A GENÉTICA GERAL',title: 'A GENÉTICA GERAL', id: 143, ch: 54}), 
+(professores29:professores {name: 'DANIELA CAVALCANTI DE MEDEIROS',title: 'DANIELA CAVALCANTI DE MEDEIROS', id: 29, ch: 72}), 
+(professores30:professores {name: 'EDMILSON SANTOS SILVA',title: 'EDMILSON SANTOS SILVA', id: 30, ch: 72}), 
+(professores31:professores {name: 'EMERSON DE LIMA',title: 'EMERSON DE LIMA', id: 31, ch: 54}), 
+(professores33:professores {name: 'JOSE VIEIRA SILVA',title: 'JOSE VIEIRA SILVA', id: 33, ch: 54}), 
+(professores35:professores {name: 'LARISSA NASCIMENTO SATIRO',title: 'LARISSA NASCIMENTO SATIRO', id: 35, ch: 126}), 
+(professores54:professores {name: 'ADELMO FERNANDES DE ARAUJO',title: 'ADELMO FERNANDES DE ARAUJO', id: 54, ch: 72}), 
+(professores55:professores {name: 'CHRISTIANE CAVALCANTE FEITOZA',title: 'CHRISTIANE CAVALCANTE FEITOZA', id: 55, ch: 72}), 
+(professores56:professores {name: 'ELIANE APARECIDA HOLANDA CAVALCANTI',title: 'ELIANE APARECIDA HOLANDA CAVALCANTI', id: 56, ch: 72}), 
+(professores57:professores {name: 'HENRIQUE COSTA HERMENEGILDO DA SILVA',title: 'HENRIQUE COSTA HERMENEGILDO DA SILVA', id: 57, ch: 240}), 
+(professores58:professores {name: 'IARA TERRA DE OLIVEIRA',title: 'IARA TERRA DE OLIVEIRA', id: 58, ch: 54}), 
+(professores59:professores {name: 'JANAILA DOS SANTOS SILVA',title: 'JANAILA DOS SANTOS SILVA', id: 59, ch: 72}), 
+(professores60:professores {name: 'JOSE VICENTE MEDEIROS DA SILVA',title: 'JOSE VICENTE MEDEIROS DA SILVA', id: 60, ch: 54}), 
+(professores61:professores {name: 'LEONARDO BROETTO',title: 'LEONARDO BROETTO', id: 61, ch: 90}), 
+(professores62:professores {name: 'LIVIA COUTO GUEDES',title: 'LIVIA COUTO GUEDES', id: 62, ch: 72}), 
+(professores63:professores {name: 'MARCIA CRISTINA DA SILVA',title: 'MARCIA CRISTINA DA SILVA', id: 63, ch: 150}), 
+(professores64:professores {name: 'MARIA ALIETE BEZERRA LIMA MACHADO',title: 'MARIA ALIETE BEZERRA LIMA MACHADO', id: 64, ch: 198}), 
+(professores65:professores {name: 'MARIA BETANIA MONTEIRO DE FARIAS',title: 'MARIA BETANIA MONTEIRO DE FARIAS', id: 65, ch: 54}), 
+(professores66:professores {name: 'MARIA LUSIA DE MORAIS BELO BEZERRA',title: 'MARIA LUSIA DE MORAIS BELO BEZERRA', id: 66, ch: 108}), 
+(professores67:professores {name: 'RICARDO DA SILVA',title: 'RICARDO DA SILVA', id: 67, ch: 54}), 
+(professores68:professores {name: 'ROMULO NUNES DE OLIVEIRA',title: 'ROMULO NUNES DE OLIVEIRA', id: 68, ch: 54}), 
+(professores69:professores {name: 'SOLMA LUCIA SOUTO MAIOR DE ARAUJO',title: 'SOLMA LUCIA SOUTO MAIOR DE ARAUJO', id: 69, ch: 200}), 
+(professores70:professores {name: 'UEDSON PEREIRA JACOBINA',title: 'UEDSON PEREIRA JACOBINA', id: 70, ch: 90}), 
+(disciplinas113)-[:ministrado]->(professores54), 
+(disciplinas114)-[:ministrado]->(professores55), 
+(disciplinas115)-[:ministrado]->(professores29), 
+(disciplinas115)-[:ministrado]->(professores30), 
+(disciplinas115)-[:ministrado]->(professores35), 
+(disciplinas115)-[:ministrado]->(professores57), 
+(disciplinas115)-[:ministrado]->(professores61), 
+(disciplinas115)-[:ministrado]->(professores63), 
+(disciplinas115)-[:ministrado]->(professores64), 
+(disciplinas115)-[:ministrado]->(professores66), 
+(disciplinas115)-[:ministrado]->(professores70), 
+(disciplinas116)-[:ministrado]->(professores29), 
+(disciplinas117)-[:ministrado]->(professores30), 
+(disciplinas118)-[:ministrado]->(professores56), 
+(disciplinas119)-[:ministrado]->(professores31), 
+(disciplinas120)-[:ministrado]->(professores57), 
+(disciplinas121)-[:ministrado]->(professores57), 
+(disciplinas122)-[:ministrado]->(professores57), 
+(disciplinas123)-[:ministrado]->(professores58), 
+(disciplinas124)-[:ministrado]->(professores59), 
+(disciplinas125)-[:ministrado]->(professores60), 
+(disciplinas126)-[:ministrado]->(professores33), 
+(disciplinas127)-[:ministrado]->(professores35), 
+(disciplinas128)-[:ministrado]->(professores35), 
+(disciplinas129)-[:ministrado]->(professores61), 
+(disciplinas130)-[:ministrado]->(professores62), 
+(disciplinas131)-[:ministrado]->(professores63), 
+(disciplinas132)-[:ministrado]->(professores63), 
+(disciplinas133)-[:ministrado]->(professores64), 
+(disciplinas134)-[:ministrado]->(professores64), 
+(disciplinas135)-[:ministrado]->(professores64), 
+(disciplinas136)-[:ministrado]->(professores65), 
+(disciplinas137)-[:ministrado]->(professores66), 
+(disciplinas138)-[:ministrado]->(professores66), 
+(disciplinas139)-[:ministrado]->(professores67), 
+(disciplinas140)-[:ministrado]->(professores68), 
+(disciplinas141)-[:ministrado]->(professores69), 
+(disciplinas142)-[:ministrado]->(professores69), 
+(disciplinas143)-[:ministrado]->(professores70)
+
+</code></pre>
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-2-1">
+						<h2 class="section-heading">Section Item 3.1</h2>
+						<p>Contiuamos a preencher o banco de dados em grafo, com a criação das arestas conectando os vértices de cursos e disciplinas</p>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+MATCH (a:cursos {id: 5}) FOREACH (id IN 
+	[113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143] | 
+	MERGE (b: disciplinas {id: id}) 
+	MERGE (a)-[:contém]->(b) 
+)
+
+</code></pre>
+					</section><!--//section-->
+
 				    <section class="docs-section" id="item-2-1">
 						<h2 class="section-heading">Section Item 3.1</h2>
 						<p>Para buscar as relações que conectam o nó "RODOLFO CARNEIRO CAVALCANTE" a outros nós e retornar a soma dos valores da propriedade "ch" dos nós com os quais ele possui relação.</p>
