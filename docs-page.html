@@ -277,6 +277,112 @@ MATCH (a:cursos {id: 5}) FOREACH (id IN
 )
 
 </code></pre>
+
+
+</section><!--//section-->
+
+<section class="docs-section" id="item-2-1">
+	<h2 class="section-heading">Section Item 3.1</h2>
+	<p>Listar nodes de um determinado tipo especifico</p>
+	<div class="simplelightbox-gallery row mb-3">
+		<div class="col-12 col-md-4 mb-3">
+			<a href="assets/images/coderpro-home.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/coderpro-home-thumb.png" alt="" title="CoderPro Home Page"/></a>
+		</div>
+	</div><!--//gallery-->
+	<div class="docs-code-block">
+
+<code class="json hljs">
+MATCH (n:cursos) RETURN n;
+</code>
+<br />
+<code class="json hljs">
+MATCH (n:disciplinas) RETURN n;
+</code>
+<br />
+<code class="json hljs">
+MATCH (n:professores) RETURN n;
+</code>
+</section><!--//section-->
+
+<section class="docs-section" id="item-2-1">
+	<h2 class="section-heading">Section Item 3.1</h2>
+	<p>Listar propriedades de nodes</p>
+	<div class="simplelightbox-gallery row mb-3">
+		<div class="col-12 col-md-4 mb-3">
+			<a href="assets/images/coderpro-home.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/coderpro-home-thumb.png" alt="" title="CoderPro Home Page"/></a>
+		</div>
+	</div><!--//gallery-->
+	<div class="docs-code-block">
+
+<code class="json hljs">
+MATCH (n) RETURN n.id;
+</code>
+<br />
+<code class="json hljs">
+MATCH (n:disciplinas) RETURN n.ch;
+</code>
+<br />
+<code class="json hljs">
+MATCH (n:professores) RETURN n.name;
+</code>
+</section><!--//section-->
+
+</section><!--//section-->
+
+
+
+<section class="docs-section" id="item-2-1">
+	<h2 class="section-heading">Section Item 3.1</h2>
+	<p>Listar todos os tipos de arestas</p>
+	<div class="simplelightbox-gallery row mb-3">
+		<div class="col-12 col-md-4 mb-3">
+			<a href="assets/images/coderpro-home.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/coderpro-home-thumb.png" alt="" title="CoderPro Home Page"/></a>
+		</div>
+	</div><!--//gallery-->
+	<div class="docs-code-block">
+
+<code class="json hljs">
+	MATCH ()-[r]->() RETURN DISTINCT type(r);
+</code>
+<br />
+</section><!--//section-->
+
+<section class="docs-section" id="item-2-1">
+	<h2 class="section-heading">Section Item 3.1</h2>
+	<p>Exibir arestas com os nodes de suas relações</p>
+	<div class="simplelightbox-gallery row mb-3">
+		<div class="col-12 col-md-4 mb-3">
+			<a href="assets/images/coderpro-home.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/coderpro-home-thumb.png" alt="" title="CoderPro Home Page"/></a>
+		</div>
+	</div><!--//gallery-->
+	<div class="docs-code-block">
+
+<code class="json hljs">
+	MATCH p=()-[:`contém`]->() RETURN p;
+</code>
+<br />
+<code class="json hljs">
+	MATCH p=()-[:ministrado]->() RETURN p;
+</code>
+<br />
+</section><!--//section-->
+
+<section class="docs-section" id="item-2-1">
+	<h2 class="section-heading">Section Item 3.1</h2>
+	<p>Para buscar as relações que conectam o nó "RODOLFO CARNEIRO CAVALCANTE" a outros nós e retornar a soma dos valores da propriedade "ch" dos nós com os quais ele possui relação.</p>
+	<div class="simplelightbox-gallery row mb-3">
+		<div class="col-12 col-md-4 mb-3">
+			<a href="assets/images/coderpro-home.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/coderpro-home-thumb.png" alt="" title="CoderPro Home Page"/></a>
+		</div>
+	</div><!--//gallery-->
+	<div class="docs-code-block">
+		<pre class="shadow-lg rounded"><code class="json hljs">
+<span class="hljs-keyword">MATCH</span> (n {name:<span class="hljs-string">"RODOLFO CARNEIRO CAVALCANTE"</span>})-[r]-(m)<br>
+<span class="hljs-keyword">RETURN</span> <span class="hljs-literal">SUM</span>(m.ch)
+
+</code></pre>
+</section><!--//section-->
+
 					</section><!--//section-->
 
 				    <section class="docs-section" id="item-2-1">
@@ -289,7 +395,7 @@ MATCH (a:cursos {id: 5}) FOREACH (id IN
 						</div><!--//gallery-->
 						<div class="docs-code-block">
 							<pre class="shadow-lg rounded"><code class="json hljs">
-<span class="hljs-keyword">MATCH</span> (n {name:<span class="hljs-string">"RODOLFO CARNEIRO CAVALCANTE"</span>})-[r]-(m)<br>
+<span class="hljs-keyword">MATCH</span> (n: professores {name:<span class="hljs-string">"RODOLFO CARNEIRO CAVALCANTE"</span>})-[r]-(m)<br>
 <span class="hljs-keyword">RETURN</span> <span class="hljs-literal">SUM</span>(m.ch)
 
 </code></pre>
