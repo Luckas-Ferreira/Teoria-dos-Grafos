@@ -278,6 +278,22 @@ MATCH (a:cursos {id: 5}) FOREACH (id IN
 
 </code></pre>
 
+<section class="docs-section" id="item-2-1">
+	<h2 class="section-heading">Section Item 3.1</h2>
+	<p>Deletar tudo o banco de dados</p>
+	<div class="simplelightbox-gallery row mb-3">
+		<div class="col-12 col-md-4 mb-3">
+			<a href="assets/images/coderpro-home.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/coderpro-home-thumb.png" alt="" title="CoderPro Home Page"/></a>
+		</div>
+	</div><!--//gallery-->
+	<div class="docs-code-block">
+
+<code class="json hljs">
+MATCH (n)
+DETACH DELETE n
+</code>
+<br />
+</section><!--//section-->
 
 </section><!--//section-->
 
@@ -319,12 +335,21 @@ MATCH (n) RETURN n.id;
 </code>
 <br />
 <code class="json hljs">
+MATCH (n) RETURN n.name, n.ch, n.id;
+</code>
+<br />
+<code class="json hljs">
 MATCH (n:disciplinas) RETURN n.ch;
 </code>
 <br />
 <code class="json hljs">
 MATCH (n:professores) RETURN n.name;
 </code>
+<br />
+<code class="json hljs">
+	MATCH (n:cursos) RETURN n.name;
+</code>
+
 </section><!--//section-->
 
 </section><!--//section-->
@@ -369,7 +394,23 @@ MATCH (n:professores) RETURN n.name;
 
 <section class="docs-section" id="item-2-1">
 	<h2 class="section-heading">Section Item 3.1</h2>
-	<p>Para buscar as relações que conectam o nó "RODOLFO CARNEIRO CAVALCANTE" a outros nós e retornar a soma dos valores da propriedade "ch" dos nós com os quais ele possui relação.</p>
+	<p>Buscar as relações que conectam o nó a outros nós, retorna, node, nodes e arestas </p>
+	<div class="simplelightbox-gallery row mb-3">
+		<div class="col-12 col-md-4 mb-3">
+			<a href="assets/images/coderpro-home.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/coderpro-home-thumb.png" alt="" title="CoderPro Home Page"/></a>
+		</div>
+	</div><!--//gallery-->
+	<div class="docs-code-block">
+		<pre class="shadow-lg rounded"><code class="json hljs">
+<span class="hljs-keyword">MATCH</span> (n {name:<span class="hljs-string">"RODOLFO CARNEIRO CAVALCANTE"</span>})-[r]-(m)<br>
+<span class="hljs-keyword">RETURN</span> n,r,m
+
+</code></pre>
+</section><!--//section-->
+
+<section class="docs-section" id="item-2-1">
+	<h2 class="section-heading">Section Item 3.1</h2>
+	<p>Para buscar as relações que conectam o nó a outros nós e retornar a soma dos valores da propriedade "ch" dos nós com os quais ele possui relação.</p>
 	<div class="simplelightbox-gallery row mb-3">
 		<div class="col-12 col-md-4 mb-3">
 			<a href="assets/images/coderpro-home.png"><img class="figure-img img-fluid shadow rounded" src="assets/images/coderpro-home-thumb.png" alt="" title="CoderPro Home Page"/></a>
@@ -395,11 +436,13 @@ MATCH (n:professores) RETURN n.name;
 						</div><!--//gallery-->
 						<div class="docs-code-block">
 							<pre class="shadow-lg rounded"><code class="json hljs">
-MATCH (n:professor {nome: {"profesorx"}})-[r]->()
+MATCH (n {name:"MARCIA CRISTINA DA SILVA"})-[r]-(m)
+
 RETURN count(r) AS relationship_count
 
 </code></pre>
 					</section><!--//section-->
+				
 					
 					<section class="docs-section" id="item-2-2">
 						<h2 class="section-heading">Section Item 3.2</h2>
