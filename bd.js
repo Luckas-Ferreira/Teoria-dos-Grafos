@@ -22,6 +22,7 @@ async function fazerRequisicao() {
 		json = responseData;
 		query = "CREATE \n";
 		edges = "";
+		cursos_conex = "";
 		for (let key in json) {
 			if (key == "cursos" || key == "disciplinas" || key == "professores") {
 				for (let d in json[key]) {
@@ -57,7 +58,7 @@ async function fazerRequisicao() {
 							}
 							if (r == "cursos") {
 								ldcT = ldc.join(", ");
-								console.log(`MATCH (a:${r} {id: ${edge}}) FOREACH (id IN [${ldcT}] | MERGE (b: ${cnd[r]} {id: id}) MERGE (a)-[:contém]->(b) )`);
+								cursos_conex = `MATCH (a:${r} {id: ${edge}}) FOREACH (id IN [${ldcT}] | MERGE (b: ${cnd[r]} {id: id}) MERGE (a)-[:contém]->(b) )`;
 
 							}
 
@@ -68,6 +69,7 @@ async function fazerRequisicao() {
 		}
 
 		console.log(query + edges);
+		console.log(cursos_conex);
 	} catch (error) {
 		console.error(error);
 	}
