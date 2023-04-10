@@ -132,14 +132,14 @@
 				    <header class="docs-header">
 					    <h1 class="docs-heading">Instalação</h1>
 
-						<section class="docs-section" id="item-1-5">
+						<section class="docs-section" id="item-2-1">
 							<h2 class="section-heading">Login Aura</h2>
 							<p>	<b>Url:</b> https://console.neo4j.io <br>	
 								<b>Email:</b> TeoriadosGrafosAB1@hi2.in<br>
 								<b>Senha:</b> TeGraAB1</p>
 						</section>
 
-						<section class="docs-section" id="item-1-5">
+						<section class="docs-section" id="item-2-2">
 							<h2 class="section-heading">Dados Database</h2>
 							<p><b>Database name: </b>GRAFOAB1<br>
 								<b>Connection URL: </b>neo4j+s://0398e2d5.databases.neo4j.io<br>
@@ -147,7 +147,7 @@
 								<b>Password=: </b>TZHfIOd7YnL1DvhxnRDXy1FidjV6Pv4Zw8D0K66StEE</p>
 						</section>
 
-						<section class="docs-section" id="item-1-5">
+						<section class="docs-section" id="item-2-3">
 							<h2 class="section-heading">Filling the Database</h2>
 							<p>Executar Preencher BD p.1 e Preencher BD p.2</p>
 						</section>
@@ -164,7 +164,7 @@
 						</section><!--//docs-intro-->
 				    </header>
 
-					<section class="docs-section" id="item-2-1">
+					<section class="docs-section" id="item-3-1">
 						<h2 class="section-heading">Preencher BD p.1</h2>
 						<p>Preencher o banco de dados em grafo, com a criação dos vértices de cursos, professores e disciplinas, seguindo da criação das arestas conectando os vértices de disciplinas e professores </p>
 						<div class="docs-code-block">
@@ -267,7 +267,7 @@ CREATE
 </code></pre>
 					</section><!--//section-->
 
-					<section class="docs-section" id="item-2-1">
+					<section class="docs-section" id="item-3-2">
 						<h2 class="section-heading">Preencher BD p.2</h2>
 						<p>Contiuamos a preencher o banco de dados em grafo, com a criação das arestas conectando os vértices de cursos e disciplinas</p>
 						<div class="docs-code-block">
@@ -280,7 +280,7 @@ MATCH (a:cursos {id: 5}) FOREACH (id IN
 
 </code></pre>
 
-<section class="docs-section" id="item-2-1">
+<section class="docs-section" id="item-3-3">
 	<h2 class="section-heading">Deletar BD</h2>
 	<p>Deletar tudo o banco de dados</p>
 
@@ -293,7 +293,7 @@ DETACH DELETE n
 <br />
 </section><!--//section-->
 
-<section class="docs-section" id="item-2-1">
+<section class="docs-section" id="item-3-4">
 	<h2 class="section-heading">Listar Nodes por Tipos</h2>
 	<p>Listar nodes de um determinado tipo especifico</p>
 
@@ -312,7 +312,7 @@ MATCH (n:professores) RETURN n;
 </code>
 </section><!--//section-->
 
-<section class="docs-section" id="item-2-1">
+<section class="docs-section" id="item-3-5">
 	<h2 class="section-heading">Listar propriedades de nodes</h2>
 	<p>Listar propriedades de nodes</p>
 
@@ -344,7 +344,7 @@ MATCH (n:professores) RETURN n.name;
 
 
 
-<section class="docs-section" id="item-2-1">
+<section class="docs-section" id="item-3-6">
 	<h2 class="section-heading">Listar arestas</h2>
 	<p>Listar todos os tipos de arestas</p>
 
@@ -356,7 +356,7 @@ MATCH (n:professores) RETURN n.name;
 <br />
 </section><!--//section-->
 
-<section class="docs-section" id="item-2-1">
+<section class="docs-section" id="item-3-7">
 	<h2 class="section-heading">Exibir arestas e relacionados</h2>
 	<p>Exibir arestas com os nodes de suas relações</p>
 
@@ -372,7 +372,7 @@ MATCH (n:professores) RETURN n.name;
 <br />
 </section><!--//section-->
 
-<section class="docs-section" id="item-2-1">
+<section class="docs-section" id="item-3-8">
 	<h2 class="section-heading">Relação Node</h2>
 	<p>Buscar as relações que conectam o nó a outros nós, retorna, node, nodes e arestas </p>
 
@@ -384,7 +384,7 @@ MATCH (n:professores) RETURN n.name;
 </code></pre>
 </section><!--//section-->
 
-<section class="docs-section" id="item-2-1">
+<section class="docs-section" id="item-3-9">
 	<h2 class="section-heading">Soma das Propriedades</h2>
 	<p>Para buscar as relações que conectam o nó a outros nós e retornar a soma dos valores da propriedade "ch" dos nós com os quais ele possui relação.</p>
 
@@ -398,7 +398,7 @@ MATCH (n:professores) RETURN n.name;
 
 					</section><!--//section-->
 
-				    <section class="docs-section" id="item-2-1">
+				    <section class="docs-section" id="item-3-10">
 						<h2 class="section-heading">Contar arestas</h2>
 						<p>Conta a quantidade de aresta que um nó contém</p>
 						
@@ -423,7 +423,7 @@ RETURN count(r) AS relationship_count
 					
 
 					
-					<section class="docs-section" id="item-2-3">
+					<section class="docs-section" id="item-3-11">
 						<h2 class="section-heading">Comparar Carga Horária</h2>
 						<p>Essa instrução vai buscar os nós que possuem relação com outros nós e filtrar somente aqueles que possuem os nomes desejados. Em seguida, será feita a soma dos valores da propriedade "ch" dos nós com os quais eles possuem relação. Por fim, será feita a ordenação dos resultados pelo valor total e será retornado o nome dos nós e o valor total, limitando os resultados a 4.</p>
 						
