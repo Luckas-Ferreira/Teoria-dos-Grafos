@@ -126,17 +126,17 @@
 
 						<section class="docs-section" id="item-1-5">
 							<h2 class="section-heading">Login Aura</h2>
-							<p>							Url: https://console.neo4j.io <br>	
-								Email:TeoriadosGrafosAB1@hi2.in<br>
-								Senha:TeGraAB1</p>
+							<p>	<b>Url:</b> https://console.neo4j.io <br>	
+								<b>Email:</b> TeoriadosGrafosAB1@hi2.in<br>
+								<b>Senha:</b> TeGraAB1</p>
 						</section>
 
 						<section class="docs-section" id="item-1-5">
 							<h2 class="section-heading">Dados Database</h2>
-							<p>Database name = GRAFOAB1<br>
-								Connection URL =neo4j+s://0398e2d5.databases.neo4j.io<br>
-								Database user=neo4j<br>
-								Password=TZHfIOd7YnL1DvhxnRDXy1FidjV6Pv4Zw8D0K66StEE</p>
+							<p><b>Database name: </b>GRAFOAB1<br>
+								<b>Connection URL: </b>neo4j+s://0398e2d5.databases.neo4j.io<br>
+								<b>Database user: </b>neo4j<br>
+								<b>Password=: </b>TZHfIOd7YnL1DvhxnRDXy1FidjV6Pv4Zw8D0K66StEE</p>
 						</section>
 
 						<section class="docs-section" id="item-1-5">
@@ -370,7 +370,7 @@ MATCH (n:professores) RETURN n.name;
 
 	<div class="docs-code-block">
 		<pre class="shadow-lg rounded"><code class="json hljs">
-<span class="hljs-keyword">MATCH</span> (n {name:<span class="hljs-string">"RODOLFO CARNEIRO CAVALCANTE"</span>})-[r]-(m)<br>
+<span class="hljs-keyword">MATCH</span> (n {name:<span class="hljs-string">"PropriedadeName"</span>})-[r]-(m)<br>
 <span class="hljs-keyword">RETURN</span> n,r,m
 
 </code></pre>
@@ -382,7 +382,7 @@ MATCH (n:professores) RETURN n.name;
 
 	<div class="docs-code-block">
 		<pre class="shadow-lg rounded"><code class="json hljs">
-<span class="hljs-keyword">MATCH</span> (n {name:<span class="hljs-string">"RODOLFO CARNEIRO CAVALCANTE"</span>})-[r]-(m)<br>
+<span class="hljs-keyword">MATCH</span> (n {name:<span class="hljs-string">"PropriedadeName"</span>})-[r]-(m)<br>
 <span class="hljs-keyword">RETURN</span> <span class="hljs-literal">SUM</span>(m.ch)
 
 </code></pre>
@@ -392,11 +392,11 @@ MATCH (n:professores) RETURN n.name;
 
 				    <section class="docs-section" id="item-2-1">
 						<h2 class="section-heading">Contar arestas</h2>
-						<p>Para buscar as relações que conectam o nó "RODOLFO CARNEIRO CAVALCANTE" a outros nós e retornar a soma dos valores da propriedade "ch" dos nós com os quais ele possui relação.</p>
+						<p>Conta a quantidade de aresta que um nó contém</p>
 						
 						<div class="docs-code-block">
 							<pre class="shadow-lg rounded"><code class="json hljs">
-MATCH (n {name:"MARCIA CRISTINA DA SILVA"})-[r]-(m)
+MATCH (n {name:"PropriedadeName"})-[r]-(m)
 
 RETURN count(r) AS relationship_count
 
@@ -416,13 +416,13 @@ RETURN count(r) AS relationship_count
 
 					
 					<section class="docs-section" id="item-2-3">
-						<h2 class="section-heading">Section Item 3.3</h2>
+						<h2 class="section-heading">Comparar Carga Horária</h2>
 						<p>Essa instrução vai buscar os nós que possuem relação com outros nós e filtrar somente aqueles que possuem os nomes desejados. Em seguida, será feita a soma dos valores da propriedade "ch" dos nós com os quais eles possuem relação. Por fim, será feita a ordenação dos resultados pelo valor total e será retornado o nome dos nós e o valor total, limitando os resultados a 4.</p>
 						
 						<div class="docs-code-block">
 							<pre class="shadow-lg rounded"><code class="json hljs">
 <span class="hljs-keyword">MATCH</span> (n)-[r]-(m)<br>
-<span class="hljs-keyword">WHERE</span> n.name <span class="hljs-keyword">IN</span> [<span class="hljs-string">"RODOLFO CARNEIRO CAVALCANTE"</span>, <span class="hljs-string">"ALEXANDRE DE ANDRADE BARBOSA"</span>, <span class="hljs-string">"ROMULO NUNES DE OLIVEIRA"</span>,<span class="hljs-string">"MARIA ESTER FERREIRA DA SILVA VIEGAS"</span>]<br>
+<span class="hljs-keyword">WHERE</span> n.name <span class="hljs-keyword">IN</span> [<span class="hljs-string">"PropriedadeName"</span>, <span class="hljs-string">"PropriedadeName"</span>, <span class="hljs-string">"PropriedadeName"</span>,<span class="hljs-string">"PropriedadeName"</span>]<br>
 <span class="hljs-keyword">WITH</span> n, <span class="hljs-keyword">SUM</span>(m.ch) <span class="hljs-keyword">AS</span> total<br>
 <span class="hljs-keyword">ORDER BY</span> total<br>
 <span class="hljs-keyword">LIMIT</span> 4<br>
