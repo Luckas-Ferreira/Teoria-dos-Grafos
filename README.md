@@ -12,7 +12,7 @@ Este é um aplicativo web que calcula o menor caminho entre cidades usando o alg
 
 ## Exemplo
 
-![Exemplo de Uso](screenshot.png)
+![Exemplo de Uso](Grafo.png)
 
 ## Personalização
 
@@ -32,7 +32,13 @@ const graph = {
   ],
 };
 ```
+## Links uteis
 
+Visualiazação do grafo: https://luckas-ferreira.github.io/Teoria-dos-Grafos/
+
+Slider:  https://docs.google.com/presentation/d/1W3lpCens9wQurm2pMArrplW3w-3iGQLQSxHr_HnHpf8/edit?usp=sharing
+
+Vídeo Explicativo: https://youtu.be/ejxflXf7I9I
 
 ### Autores
 ---
